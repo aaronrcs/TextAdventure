@@ -14,4 +14,4 @@ One of two outcomes can happen:
 --> The game ends either if the player finds the goal with two prizes in hand (a win) or dies (all hit points are gone --- lose). 
 
 
-Technologies Used: HTML, CSS, JQuery, Javascript
+Languages Used: HTML, CSS, JQuery, Javascript
