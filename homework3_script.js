@@ -57,17 +57,17 @@ getPrizeName2 = prizeName2;
 
 function printTable(table) {
 
-    var paragraph = document.createElement("p");
-    paragraph.innerHTML = table;
+    var gameMap = document.createElement("p");
+    gameMap.innerHTML = table;
 
-    document.body.appendChild(paragraph);
+    document.body.appendChild(gameMap);
 
 
 }
 
 function updateInfoPlayer(currentRow,currentColumn) {
 
-    var paragraph = document.createElement("p");
+    var paragraph = document.createElement("div");
     paragraph.innerHTML = "Current Location: " + "(" + currentRow  +  "," + currentColumn + ")"
         + "Current Health: " + adventurer.healthPoints;
 
@@ -277,11 +277,11 @@ var updatedColumn = currentC;
 
 function makeTableHTML() {
 
-    var result = document.write("<table border = 1 id='mainTable' cellpadding='10' cellspacing='5'>");
+    var result = document.write("<table style='border: 1px solid green;' border = 1 id='mainTable' cellpadding='10' cellspacing='5'>");
 
     for(i = 0; i < htmlGrid.length; i++) {
 
-        result += "<tr id='getRows'>";
+        result += "<tr style='border-collapse: collapse;' id='getRows'>";
 
         for(j = 0; j < htmlGrid[i].length; j++){
 
@@ -290,6 +290,7 @@ function makeTableHTML() {
 
         }
 
+        // var randomSpotInMap = Math.floor((Math.random() * 8) + 0);
 
         htmlGrid[3][3] = "S";
         htmlGrid[7][7] = "G";
@@ -316,6 +317,8 @@ function makeTableHTML() {
 
 
 }
+
+
 
 printTable(makeTableHTML());
 
